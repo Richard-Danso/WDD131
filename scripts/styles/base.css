@@ -1,0 +1,235 @@
+/* ==========================================
+   1. Base & Reset Styles
+   ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* ==========================================
+   2. Header & Navigation (Top Banner)
+   ========================================== */
+header {
+    background-color: #184e77; /* Deep blue theme color */
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    background-color: #2c2c2c; /* Dark grey nav strip */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around; /* Distributes links evenly across the bar */
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #bcccda; /* Light blue accent shift on hover */
+}
+
+/* ==========================================
+   3. Main Content Layout
+   ========================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.2rem;
+    color: #111111;
+    font-weight: 500;
+}
+
+/* Two-column layout grid for the main cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* About Me takes up ~66%, Resources takes ~33% */
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   4. Card Component Modular System
+   ========================================== */
+.card {
+    background: #ffffff;
+    border: 1px solid #bcccda;
+    border-radius: 8px;
+    overflow: hidden; /* Clips top heading background to card's border radius */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    background-color: #184e77; /* Heading background color matching headers */
+    color: #ffffff;
+    margin: 0;
+    padding: 14px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+/* ==========================================
+   5. About Me Card Inner Mechanics
+   ========================================== */
+/* Bio layout grid wrapper */
+.bio-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.bio-section p {
+    margin: 0;
+    flex: 1;
+}
+
+.profile-img {
+    width: 140px;
+    height: auto;
+    border: 1px solid #cccccc;
+}
+
+/* Middle title heading decoration */
+.sub-heading {
+    text-align: center;
+    margin: 25px 0 5px 0;
+    color: #2c2c2c;
+    font-size: 1.15rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #cccccc;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+/* Bottom Country & Flag layout flex */
+.country-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.country-section p {
+    margin: 0;
+    flex: 1;
+}
+
+.flag-box {
+    width: 150px;
+    text-align: center;
+}
+
+.flag-box img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+}
+
+.caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666666;
+    margin-top: 6px;
+}
+
+/* ==========================================
+   6. Resources Card Customization
+   ========================================== */
+.resources-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.resources-card li {
+    margin-bottom: 12px;
+}
+
+.resources-card a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.resources-card a:hover {
+    color: #00008b;
+}
+
+/* ==========================================
+   7. Footer Construction
+   ========================================== */
+footer {
+    background-color: #184e77;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    line-height: 1.7;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+footer .last-modified {
+    color: #ccff00; /* Distinct highlight color matching the screenshot */
+    font-size: 0.95rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   8. Responsive Design Framework
+   ========================================== */
+@media (max-width: 850px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cards wrap to stack vertically on smaller screen resolutions */
+    }
+    
+    .bio-section, .country-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-img, .flag-box {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
