@@ -1,0 +1,123 @@
+/* --- Core Resets & Fonts --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Centered Page Bounds --- */
+header, main, footer {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+/* --- Header & Navigation Bar --- */
+header {
+    background-color: #4A0E4E; /* Precise deep royal purple */
+    padding: 22px 35px;
+    margin-top: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* --- Main Structure & Title --- */
+main {
+    flex: 1;
+    padding: 35px 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #000000;
+}
+
+/* --- Photo Grid Setup --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 crisp, equal columns */
+    gap: 30px 25px; /* Spacing between grid cells */
+    justify-items: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    max-width: 320px; /* Perfectly scales images to match layout bounds */
+    display: block;
+    object-fit: cover;
+}
+
+figcaption {
+    color: #4A0E4E; /* Dark purple matching theme text */
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #4A0E4E;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer p {
+    margin: 2px 0;
+}
+
+.last-modified {
+    font-size: 11px;
+    opacity: 0.85;
+}
