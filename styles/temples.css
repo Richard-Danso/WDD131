@@ -34,6 +34,12 @@ header {
     align-items: center;
 }
 
+nav a {
+    margin-left: 20px; /* Gives links crisp, intentional spacing */
+    text-decoration: none;
+    color: white;
+}
+
 .logo {
     color: #ffffff;
     font-size: 28px;
@@ -44,14 +50,7 @@ nav {
     display: flex;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 28px;
-    font-size: 17px;
-    font-weight: 400;
-    transition: opacity 0.2s ease;
-}
+
 
 nav a:hover {
     opacity: 0.8;
@@ -120,4 +119,32 @@ footer p {
 .last-modified {
     font-size: 11px;
     opacity: 0.85;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+    align-items: start; /* Keeps rows vertically aligned at the top */
+}
+
+.grid-container figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container figure img {
+    width: 100%;
+    max-width: 320px;   /* Limits maximum width */
+    height: 220px;      /* FORCES identical height across all photos */
+    object-fit: cover;  /* Crops cleanly so images don't look squished */
+    border-radius: 4px; /* Optional clean edge */
+}
+
+.grid-container figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
 }
