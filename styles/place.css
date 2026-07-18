@@ -1,0 +1,128 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #002868; /* Norway blue */
+    --secondary-color: #EF2B2D; /* Norway red */
+    --text-color: #333333;
+    --bg-light: #F4F4F4;
+    --white: #FFFFFF;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.info-card, .weather-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-card h2, .weather-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 0.3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Default Mobile Weather Icon */
+.mobile-weather-icon {
+    fill: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.last-modified {
+    color: #DDDDDD;
+    margin-top: 0.5rem;
+}
+
+/* --- Media Query for Desktop / Wider Views --- */
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    /* Hide the mobile SVG icon in desktop layout */
+    .weather-icon-container {
+        display: none;
+    }
+
+    /* Requirement: Append weather emoticon pseudo-element in wide view */
+    .weather-heading::after {
+        content: " ⛅";
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore  Ghana | Country Page</title>
+    <meta name="description" content="W03 Assignment - Country Page featuring Ghana layout, facts, and weather data.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Accra Ghana</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <!-- Utilizing picture element with srcset and WebP format -->
+            <picture>
+                <source srcset="images/Accra.webp" media="(min-width: 600px)">
+                <img src="images/Accra.webp" alt="Beautiful Accra skyline under daylight" loading="lazy">
+            </picture>
+            <h2 class="hero-title">The Land of the Midnight Sun</h2>
+        </div>
+
+        <section class="info-card">
+            <h2>Overview</h2>
+            <ul>
+                <li><strong>Capital:</strong> Accra</li>
+                <li><strong>Population:</strong> 35.7 Million</li>
+                <li><strong>Language:</strong> English</li>
+                <li><strong>Currency:</strong> Ghana Cedi (GHS)</li>
+            </ul>
+        </section>
+
+        <section class="weather-card">
+            <!-- The pseudo-element will attach the icon right after this heading in desktop view -->
+            <h2 class="weather-heading">Weather </h2>
+            <div class="weather-info">
+                <!-- Mobile SVG Weather Icon -->
+                <div class="weather-icon-container">
+                    <svg class="mobile-weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="48" height="48">
+                        <path d="M480-160q-100 0-170-70t-70-170q0-92 59.5-160T452-636q11-4 22.5-5.5t23.5-1.5q17 0 33.5 3t32.5 9q-25 36-37 78.5T515-464q0 62 31 113.5t84 81.5q-32 37-75.5 58T480-160Z"/>
+                    </svg>
+                </div>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">5</span> °C</li>
+                    <li><strong>Condition:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> <span id="wind">10</span> km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+        <p>&copy; <span id="currentyear"></span> ☄️☄️ Richard Danso ☄️☄️ Ghana</p>
+        <p class="last-modified">Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
