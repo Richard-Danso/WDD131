@@ -1,0 +1,22 @@
+## W04 Project: Website Subject Submission
+
+### Subject
+Tabletop Alliance - A Regional Board Game & TCG Club Website
+
+---
+
+### Content
+A brief overview of the planned content for the website:
+
+* **Home Page:** Introduction to the club, upcoming event highlights, weekly featured games, and a "Join the Club" call-to-action.
+* **Informational/Detail Pages:** Game library catalog (game complexity ratings, play times, player counts), game night location details, and beginner rules guides.
+* **Interactive Elements (JavaScript):** 
+  * Dynamic game library search/filter (filter games by player count or genre).
+  * Interactive RSVP event sign-up form with input validation.
+  * Dark/Light mode toggle for high-contrast reading.
+
+---
+
+### Reason
+* **Personal Interest:** Tabletop gaming is a major hobby of mine. I frequently organize game nights for my friends, and I've always wanted to build a localized hub to help regional players connect and find new games to play.
+* **Technical Fit:** This topic provides a great structure for applying responsive HTML/CSS layout techniques and implementing practical JavaScript functionality (like dynamic filtering, event handling, and DOM manipulation) required for the project outcomes.
