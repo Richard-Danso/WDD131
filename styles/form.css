@@ -1,0 +1,213 @@
+/* Color Palette & Global Variables */
+:root {
+    --primary-color: #1f2937;
+    --secondary-color: #3b82f6;
+    --accent-color: #f59e0b;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --text-color: #111827;
+    --border-color: #d1d5db;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+main {
+    flex: 1;
+    max-width: 650px;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Form Styles */
+.review-form {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.form-item {
+    margin-bottom: 1.5rem;
+}
+
+label, legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #dc2626;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: transparent;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+/* Interactive Star Rating (CSS Flex Direction Reverse Trick) */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    font-size: 2rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: var(--accent-color);
+}
+
+/* Checkboxes Layout */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--secondary-color);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Confirmation Page Layout */
+.confirmation-container {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.counter-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.counter-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    background-color: #374151;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
