@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Site Plan</title>
+    <meta name="description" content="Site plan document for the final project in WDD 131.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <!-- Google Fonts for typography demonstration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Site Plan: TechGear Hub</h1>
+        <h2>Your Name</h2>
+        <h2>WDD 131</h2>
+    </header>
+
+    <main>
+        <!-- Site Name Section -->
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Name:</strong> TechGear Hub</p>
+            <p><strong>Reasoning:</strong> I chose this name because the website is designed as a central hub for technology enthusiasts seeking reviews, specs, and gear recommendations for modern workplace electronics.</p>
+            <p><strong>Optional Domain Availability:</strong> techgearhub.org</p>
+        </section>
+
+        <hr>
+
+        <!-- Site Purpose Section -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The site serves as a resource for remote workers and tech hobbyists to discover quality computer peripherals, monitor setups, and workspace accessories. It provides product reviews, interactive comparison tools, and curated buying guides.</p>
+        </section>
+
+        <hr>
+
+        <!-- Scenarios Section -->
+        <section>
+            <h2>Target Audience Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> What ergonomic mechanical keyboard should I buy if I work long hours remotely?</li>
+                <li><strong>Scenario 2:</strong> Where can I find a comparison of dual-monitor desk setups for under $300?</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Color Schema Section -->
+        <section>
+            <h2>Color Palette</h2>
+            <p>This site plan document actively demonstrates the chosen color scheme:</p>
+            <div class="color-palette">
+                <div class="color-box primary">
+                    <span>Primary Color</span>
+                    <code>#1f2937</code>
+                    <small>Used for headers, navigation backgrounds, and primary accents.</small>
+                </div>
+                <div class="color-box secondary">
+                    <span>Secondary Color</span>
+                    <code>#3b82f6</code>
+                    <small>Used for buttons, links, and highlighted borders.</small>
+                </div>
+                <div class="color-box accent">
+                    <span>Accent / Background</span>
+                    <code>#f3f4f6</code>
+                    <small>Used for section backgrounds and card layouts.</small>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Typography Section -->
+        <section>
+            <h2>Typography</h2>
+            <p>The site utilizes two complementary Google Fonts:</p>
+            <ul>
+                <li class="font-heading-sample">
+                    <strong>Heading Font:</strong> "Montserrat", sans-serif (Used for all headings: H1, H2, H3)
+                </li>
+                <li class="font-body-sample">
+                    <strong>Body Font:</strong> "Open Sans", sans-serif (Used for paragraphs, list items, and form elements)
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Wireframes Section -->
+        <section>
+            <h2>Wireframes</h2>
+            <p>The following diagrams represent the proposed structural layout for the homepage across different screen sizes:</p>
+            
+            <h3>Mobile View</h3>
+            <div class="wireframe-container mobile-wf">
+                <div class="wf-box header">Header / Nav</div>
+                <div class="wf-box hero">Hero Banner</div>
+                <div class="wf-box content">Feature Card 1</div>
+                <div class="wf-box content">Feature Card 2</div>
+                <div class="wf-box footer">Footer</div>
+            </div>
+
+            <h3>Desktop View</h3>
+            <div class="wireframe-container desktop-wf">
+                <div class="wf-box header">Header / Nav</div>
+                <div class="wf-box hero">Hero Banner (Full Width)</div>
+                <div class="wf-grid">
+                    <div class="wf-box content">Feature Card 1</div>
+                    <div class="wf-box content">Feature Card 2</div>
+                    <div class="wf-box content">Feature Card 3</div>
+                </div>
+                <div class="wf-box footer">Footer</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Website Site Plan | WDD 131</p>
+    </footer>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
