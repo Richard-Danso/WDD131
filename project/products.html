@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear Hub | Gear Catalog</title>
+    <meta name="description" content="Browse and filter tech gear recommendations and workspace equipment.">
+    <meta name="author" content="Richard Danso">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>TechGear Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Gear Catalog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Workspace Gear Catalog</h2>
+
+        <div class="controls">
+            <label for="category-filter"><strong>Filter by Category:</strong></label>
+            <select id="category-filter">
+                <option value="all">All Items</option>
+                <option value="Keyboards">Keyboards</option>
+                <option value="Monitors">Monitors</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+
+        <div id="catalog-grid" class="product-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | TechGear Hub | <a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
